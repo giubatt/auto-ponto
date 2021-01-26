@@ -2,7 +2,9 @@
   "name": "auto-ponto",
   "version": "1.0.0",
   "main": "src/index.js",
-  "bin": "src/index.js",
+  "bin": {
+    "auto-ponto": "src/index.js"
+  },
   "license": "MIT",
   "type": "module",
   "dependencies": {
@@ -12,7 +14,14 @@
     "meow": "^9.0.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "auto-ponto -m 666 -d 2021-03-15"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giubatt/auto-ponto.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/giubatt/auto-ponto/issues"
+  },
+  "homepage": "https://github.com/giubatt/auto-ponto#readme",
+  "description": ""
 }
