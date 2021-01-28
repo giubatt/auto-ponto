@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-import { createRequire } from 'module';
-import createSheet from './createSheet.js'
-const meow = createRequire(import.meta.url)('meow');
+const createSheet = require('./createSheet.js')
+const meow = require('meow');
 
 const cli = meow(`
 	Usage

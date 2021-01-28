@@ -1,12 +1,11 @@
 {
   "name": "auto-ponto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/index.js",
   "bin": {
     "auto-ponto": "src/index.js"
   },
   "license": "MIT",
-  "type": "module",
   "dependencies": {
     "axios": "^0.21.1",
     "date-fns": "^2.16.1",

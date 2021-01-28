@@ -1,12 +1,10 @@
 #!/usr/bin/env node
-import Excel from 'exceljs'
-import fs from 'fs/promises'
-import path from 'path'
-import { fileURLToPath } from 'url'; 
-import dateFns from 'date-fns'
-import axios from 'axios'
+const Excel = require('exceljs')
+const fs = require('fs/promises')
+const path = require('path')
+const dateFns = require('date-fns')
+const axios = require('axios')
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const createLines = ({ matricula, date, holidays }) => {
   const day = dateFns.getDate(date)
@@ -30,7 +28,7 @@ const createLines = ({ matricula, date, holidays }) => {
   ]))
 }
 
-export default async function createSheet({ matricula, output = 'outputSheet.xlsx', date = new Date() }) {
+module.exports = async function createSheet({ matricula, output = 'outputSheet.xlsx', date = new Date() }) {
   const data = await fs.readFile(path.join(__dirname, 'baseSheet.xlsx'))
 
   const workbook = new Excel.Workbook();
